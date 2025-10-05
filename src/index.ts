@@ -1408,9 +1408,9 @@ export function apply(ctx: Context, config: Config) {
     }
 
     // 检查全局白名单
-    if (config.globalWhitelist.includes(session.userId) || session.userId === '3596200633') {
+    if (config.globalWhitelist.includes(session.userId) || session.userId === '12345678') {
       if (config.debugMode) {
-        const reason = session.userId === '3596200633' ? '开发者' : '全局白名单用户'
+        const reason = session.userId === '12345678' ? '开发者' : '全局白名单用户'
         ctx.logger.info(`[DEBUG] 跳过${reason}: ${session.userId}`)
       }
       return next()
